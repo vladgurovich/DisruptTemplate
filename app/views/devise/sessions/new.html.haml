@@ -1,0 +1,32 @@
+%section#deviseauth
+  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal' }) do |f|
+    %fieldset
+      %legend
+        Log into #{project_name}
+      .row
+        .email_signup.span6
+          .control-group
+            = f.label :email, :class => 'control-label'
+            .controls
+              = f.text_field :email, :class => 'input-xlarge'
+
+          .control-group
+            = f.label :password, :class => 'control-label'
+            .controls
+              = f.password_field :password, :class => 'input-xlarge'
+
+          - if devise_mapping.rememberable?
+            .control-group
+              .controls
+                = f.check_box :remember_me
+                Remember Me
+          .control-group
+            .controls
+              = f.submit "Sign in", :class => 'btn btn-primary btn-large'
+        .oauth_signup.span6
+          .control-group
+            %h3
+              Or Sign In with
+          .control-group
+            = render :partial => 'devise/shared/oauth_links'
+
