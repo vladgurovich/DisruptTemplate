@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-DisruptTemplate::Application.config.secret_token = 'SUPER_SEKRET_TOKEN'
+DisruptTemplate::Application.config.secret_token = 'SUPER_SEKRET_TOKENSUPER_SEKRET_TOKENSUPER_SEKRET_TOKENSUPER_SEKRET_TOKEN'
