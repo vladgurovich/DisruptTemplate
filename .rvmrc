@@ -1,4 +1,4 @@
-rvm use ruby-1.9.3-p125@disrupt --create
+rvm use ruby-1.9.3-p194@disrupt --create
 if ! command -v bundle ; then
   gem install bundler
   bundle install --local
